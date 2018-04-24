@@ -409,7 +409,7 @@ function MoveTable(props) {
             rank={row.rankDisplay || row.rank}
             pump={row.pumpWith}
             name={row.name}
-            id={row.key.replace(/ /g, '')}
+            id={row.key.replace(/\W/g, '')}
             />
         )}
     />;
