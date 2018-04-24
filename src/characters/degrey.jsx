@@ -50,12 +50,6 @@ export const degrey = {
         // quote: "By silver tongue or mighty fists, I will get justice for all."
         cardAbilities: [
             {
-                rank: 7,
-                name: 'Point, Counterpoint',
-                timing: 'During Combat',
-                text: 'Discard a card to rotate this 180 degrees.',
-            },
-            {
                 rank: 4,
                 name: 'Troublesome Rhetoric',
                 timing: 'Draw Phase',
@@ -63,6 +57,12 @@ export const degrey = {
                     'Choose attack, block, throw, or dodge. If the opponent ' +
                     'combat-reveals that option this turn, gain 12 life.'
                 )
+            },
+            {
+                rank: 7,
+                name: 'Point, Counterpoint',
+                timing: 'During Combat',
+                text: 'Discard a card to rotate this 180 degrees.',
             },
             {
                 rank: 'A',
@@ -184,6 +184,16 @@ degrey.variants = {
             // quote: "By silver tongue or by blood-letting, I will get justice for all."
             cardAbilities: [
                 {
+                    rank: 4,
+                    name: 'Troublesome Rhetoric',
+                    timing: null,
+                    text: <span>
+                        After the draw phase, you may discard this card to choose:
+                        attack, block, throw, or dodge. If the opponent reveals
+                        that option in combat this turn, gain 12 life.
+                    </span>
+                },
+                {
                     rank: 7,
                     name: 'Point, Counterpoint',
                     timing: null,
@@ -191,16 +201,6 @@ degrey.variants = {
                         If you play this card as a face down combat card, after
                         combat cards are revealed you may discard a card to
                         rotate this card 180 degrees.
-                    </span>
-                },
-                {
-                    rank: 4,
-                    name: 'Troublesome Rhetoric',
-                    timing: null,
-                    text: <span>
-                        After the draw phase, you may discard a card to choose:
-                        attack, block, throw, or dodge. If the opponent reveals
-                        that option in combat this turn, gain 12 life.
                     </span>
                 },
                 {
