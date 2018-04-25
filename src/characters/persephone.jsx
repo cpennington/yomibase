@@ -1,6 +1,6 @@
 import React from 'react';
 import {CantCombo, Ender, Starter, ComboDetails} from '../combo.jsx';
-import {mkNormal} from '../move.jsx';
+import {mkNormal, overrideMoves} from '../move.jsx';
 import {EX} from '../editions.jsx';
 
 const normalAttack = mkNormal(0.4);
@@ -159,7 +159,10 @@ persephone.variants = {
             ]),
             attacks: persephone.summary.attacks.concat(['D']),
         }),
-        attacks: persephone.attacks.concat([
+        attacks: overrideMoves(persephone.attacks, [
+            {rank: 5, goodCombo: '5>6>D', goodDamage: 17},
+            {rank: 6, goodCombo: '6>D', goodDamage: 12},
+        ]).concat([
             {
                 speed: 2.8, rank: 'D', name: 'Loyal Pets', damage: 6, chip: 3,
                 comboPts: 2, comboType: <Ender/>
